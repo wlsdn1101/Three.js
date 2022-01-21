@@ -1,24 +1,20 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls } from "@react-three/drei";
+import { Chicken } from "./components";
 import "./App.css";
 
-function Box() {
-  return (
-    <mesh>
-      <cylinderBufferGeometry args={[1, 1, 0.3, 50]} />
-      <meshLambertMaterial attach="material" color="gold" />
-    </mesh>
-  );
-}
 function App() {
   return (
     <div className="App">
-      <Canvas>
+      <Canvas camera={{ position: [4, 2, 4] }}>
         <OrbitControls />
-        <ambientLight intensity={0.5} />
+        {/*<Stars/> 우주 만들기 */}
+        {/*ambientLight : 모든 오브젝트를 전역으로 빛을 비춰준다. 그림자 X */}
+        <ambientLight intensity={1} />
+        {/*spotLight : 원뿔 모양에 따라 빛 방출. 그림자 O */}
         <spotLight position={[10, 15, 10]} />
-        <Box />
+        <Chicken />
       </Canvas>
     </div>
   );
