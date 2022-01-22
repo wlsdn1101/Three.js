@@ -9,6 +9,8 @@ function App() {
     <div className="App">
       <Canvas camera={{ position: [4, 2, 4] }}>
         <OrbitControls />
+        {/*gridHelper : 좌표평면 그리기 args : 크기, 색상 */}
+        <gridHelper args={[100, 100, "white", "pink"]} />
         {/*<Stars/> 우주 만들기 */}
         {/*ambientLight : 모든 오브젝트를 전역으로 빛을 비춰준다. 그림자 X */}
         <ambientLight intensity={1} />

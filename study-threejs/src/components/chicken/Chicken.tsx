@@ -57,7 +57,7 @@ function wing(iswingLeft: boolean) {
 }
 const Chicken = () => {
   return (
-    <>
+    <mesh>
       {body()}
       {eyes()}
       {chin()}
@@ -66,7 +66,7 @@ const Chicken = () => {
       {hip()}
       {wing(true)}
       {wing(false)}
-    </>
+    </mesh>
   );
 };
 
