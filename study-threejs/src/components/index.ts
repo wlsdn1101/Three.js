@@ -1,1 +1,2 @@
-export {default as Chicken} from './chicken/Chicken'
+export {default as ChickenObj} from './chicken/ChickenObj'
+export {default as EarthObj} from './earth/EarthObj'
